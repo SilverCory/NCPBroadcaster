@@ -1,0 +1,5 @@
+name: NCPBroadcaster
+author: Cory Redmond
+description: Broadcasts hack notifications.
+main: co.ryred.ncpbroadcaster.bungee.NCPBroadcasterPlugin
+version: ${pom.version}

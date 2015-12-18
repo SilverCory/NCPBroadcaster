@@ -1,0 +1,17 @@
+name: NCPBroadcaster
+author: Cory Redmond
+description: Broadcasts hack notifications.
+main: co.ryred.ncpbroadcaster.bukkit.NCPBroadcasterPlugin
+version: ${pom.version}
+depend: [NoCheatPlus]
+
+commands:
+   ncpbroadcast:
+     description: Broadcast a message to all admins on the network.
+     permission: ncpbroadcaster.execute
+     usage: 'Syntax error! Simply type "/ncpbroadcast [message]".'
+
+permissions:
+  ncpbroadcaster.execute:
+    description: 'Allows broadcasting messages to all admins on the network via command.'
+    default: op

@@ -1,0 +1,12 @@
+admins:
+  - 'acecheesecr14'
+  - 'Gran_Daddie'
+  - 'Notch'
+
+admins-uuid:
+  - '3df9473c-c589-4a1a-b0ee-fe069dee13f9'
+  - 'd4b4f717-ef94-479d-8fab-38fa724ffd4e'
+  - '66242c0c-aed9-4ee8-93d6-444dbf4966c4'
+  - '51039356-7079-4aae-86dd-1e0fe7a650c1'
+
+broadcast-format: '&9[&e%SERVER%&9] &r%MESSAGE%'
