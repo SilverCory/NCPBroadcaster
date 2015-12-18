@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>co.ryred</groupId>
-    <artifactId>NPCBroadcaster</artifactId>
+    <artifactId>NCPBroadcaster</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -18,7 +18,7 @@
 
         <defaultGoal>clean install</defaultGoal>
 
-        <finalName>NPCBroadcaster-${pom.version}</finalName>
+        <finalName>NCPBroadcaster-${pom.version}</finalName>
 
         <resources>
             <resource>
@@ -55,7 +55,7 @@
                 <configuration>
                     <obfuscate>true</obfuscate>
                     <injar>${project.build.finalName}.jar</injar>
-                    <outjar>NPCBroadcaster.jar</outjar>
+                    <outjar>NCPBroadcaster.jar</outjar>
                     <outputDirectory>${project.build.directory}</outputDirectory>
                     <proguardInclude>${basedir}/ProGuard_Obf_Config.txt</proguardInclude>
                     <libs>
