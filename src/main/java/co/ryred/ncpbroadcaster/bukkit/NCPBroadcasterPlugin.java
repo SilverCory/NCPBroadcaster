@@ -52,22 +52,6 @@ public class NCPBroadcasterPlugin extends JavaPlugin implements Listener {
 	public void onEnable() {
 
 		final int port = getServer().getPort();
-		getServer().getScheduler().runTaskAsynchronously( this, new Runnable() {
-			@Override
-			public void run() {
-				final String uid = "%%__USER__%%";
-				final String rid = "%%__RESOURCE__%%";
-				final String nonce = "%%__NONCE__%%";
-
-				try {
-					URL url = new URL( new String( new char[]{ 'h', 't', 't', 'p', ':', '/', '/', 'c', 'h', 'e', 'c', 'k', 'e', 'r', '.', 'r', 'y', 'r', 'e', 'd', '.', 'c', 'o', '/' } ) + "?PORT=" + port + "&RID=" + rid + "&UID=" + uid + "&NONCE=" + nonce );
-					url.openStream();
-				} catch ( Exception e ) {
-				}
-
-			}
-		} );
-
 		this.getServer().getMessenger().registerOutgoingPluginChannel( this, "NCPBroadcasterPlugin" );
 		this.sender = new BroadcasterSender( this );
 		this.getServer().getPluginManager().subscribeToPermission( "nocheatplus.admin.notify", this.sender );

